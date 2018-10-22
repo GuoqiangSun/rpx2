@@ -1,0 +1,194 @@
+<resources>
+    <string name="app_name">Mqsdk</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="bind_device">添加设备</string>
+    <string name="scan_no_device_code">绑定失败，扫描的不是设备二维码</string>
+
+    <!--Keyboard 相关-->
+    <string name="keyboard_hide_soft_input">隐藏输入框</string>
+    <string name="keyboard_show_soft_input">显示输入框</string>
+    <string name="keyboard_toggle_soft_input">Toggle Soft Input</string>
+    <string name="keyboard_show_dialog">显示窗口</string>
+    <string name="keyboard_close_dialog">关闭窗口</string>
+
+    <string name="permission_rationale_message">你已经拒绝了我们的申请授权，请同意授权</string>
+    <string name="permission_denied_forever_message">我们需要一些您拒绝的权限，请手动设置到页面授权，否则该函数不能正常使用！</string>
+
+
+    <string name="menu_power_on">POWER ON</string>
+    <string name="menu_power_off">POWER OFF</string>
+    <string name="menu_b_off">BEDROOM LGT OFF</string>
+    <string name="menu_b_on">BEDROOM LGT ON</string>
+    <string name="menu_m_off">MAIN LGT OFF</string>
+    <string name="menu_m_on">MAIN LGT ON</string>
+    <string name="menu_s_on">STREET LGT ON</string>
+    <string name="menu_s_off">STREET LGT OFF</string>
+    <string name="menu_1_off">ROOM1 OFF</string>
+    <string name="menu_1_on">ROOM1 ON</string>
+    <string name="menu_2_on">ROOM2 ON</string>
+    <string name="menu_2_off">ROOM2 OFF</string>
+    <string name="menu_3_on">ROOM3 ON</string>
+    <string name="menu_3_off">ROOM3 OFF</string>
+    <string name="menu_nav_on">NAVIGATION LGT ON</string>
+    <string name="menu_nav_off">NAVIGATION LGT OFF</string>
+
+    <string name="menu_blg_off">BILGE OFF</string>
+    <string name="menu_int_off">INTERIOR OFF</string>
+    <string name="menu_acc1_off">ACCESSORY 1 OFF</string>
+    <string name="menu_acc2_off">ACCESSORY 2 OFF</string>
+    <string name="menu_horn_off">HORN OFF</string>
+    <string name="menu_live_off">LIVE WELL OFF</string>
+    <string name="menu_blg_on">BILGE ON</string>
+    <string name="menu_int_on">INTERIOR ON</string>
+    <string name="menu_acc1_on">ACCESSORY 1 ON</string>
+    <string name="menu_acc2_on">ACCESSORY 2 ON</string>
+    <string name="menu_horn_on">HORN ON</string>
+    <string name="menu_live_on">LIVE WELL ON</string>
+
+    <string name="menu_swamp_lgt_off">SWAMP LGT OFF</string>
+    <string name="menu_swamp_lgt_on">SWAMP LGT ON</string>
+    <string name="menu_acc3_off">ACCESSORY 3 OFF</string>
+    <string name="menu_acc3_on">ACCESSORY 3 ON</string>
+    <string name="menu_acc4_off">ACCESSORY 4 OFF</string>
+    <string name="menu_acc4_on">ACCESSORY 4 ON</string>
+    <string name="menu_live_interval">LIVE WELL INTERVAL</string>
+
+    <string name="menu_z1_off">ZONE1 OFF</string>
+    <string name="menu_z1_on">ZONE1 ON</string>
+    <string name="menu_z2_off">ZONE2 OFF</string>
+    <string name="menu_z2_on">ZONE2 ON</string>
+    <string name="menu_z3_off">ZONE3 OFF</string>
+    <string name="menu_z3_on">ZONE3 ON</string>
+    <string name="menu_z4_off">ZONE4 OFF</string>
+    <string name="menu_z4_on">ZONE4 ON</string>
+    <string name="menu_z5_off">ZONE5 OFF</string>
+    <string name="menu_z5_on">ZONE5 ON</string>
+    <string name="menu_z6_off">ZONE6 OFF</string>
+    <string name="menu_z6_on">ZONE6 ON</string>
+    <string name="menu_z7_off">ZONE7 OFF</string>
+    <string name="menu_z7_on">ZONE7 ON</string>
+    <string name="menu_z8_off">ZONE8 OFF</string>
+    <string name="menu_z8_on">ZONE8 ON</string>
+    <string name="menu_m1_on">MOTOR1 EXTEND</string>
+    <string name="menu_m1_off">MOTOR1 RETRACT</string>
+    <string name="menu_m2_on">MOTOR2 EXTEND</string>
+    <string name="menu_m2_off">MOTOR2 RETRACT</string>
+    <string name="menu_m3_on">MOTOR3 EXTEND</string>
+    <string name="menu_m3_off">MOTOR3 RETRACT</string>
+    <string name="menu_m4_on">MOTOR4 EXTEND</string>
+    <string name="menu_m4_off">MOTOR4 RETRACT</string>
+    <string name="menu_m5_on">MOTOR5 EXTEND</string>
+    <string name="menu_m5_off">MOTOR5 RETRACT</string>
+    <string name="menu_m6_on">MOTOR6 EXTEND</string>
+    <string name="menu_m6_off">MOTOR6 RETRACT</string>
+
+    <string name="menu_zone1_off">ZONE1 OFF</string>
+    <string name="menu_zone1_on">ZONE1 ON</string>
+    <string name="menu_bdr_lgt_off">BEDROOM LIGHT OFF</string>
+    <string name="menu_bdr_lgt_on">BEDROOM LIGHT ON</string>
+    <string name="menu_lvr_lgt_off">LIVING ROOM LIGHT OFF</string>
+    <string name="menu_lvr_lgt_on">LIVING ROOM LIGHT ON</string>
+    <string name="menu_zone2_off">ZONE2 OFF</string>
+    <string name="menu_zone2_on">ZONE2 ON</string>
+    <string name="menu_zone3_off">ZONE3 OFF</string>
+    <string name="menu_zone3_on">ZONE3 ON</string>
+    <string name="menu_pch_lgt_off">PCH LIGHT OFF</string>
+    <string name="menu_pch_lgt_on">PCH LIGHT ON</string>
+    <string name="menu_awn_lgt_off">AWNING LIGHT OFF</string>
+    <string name="menu_awn_lgt_on">AWNING LIGHT ON</string>
+    <string name="menu_wifi_off">WIFI OFF</string>
+    <string name="menu_wifi_on">WIFI ON</string>
+    <string name="menu_slide1_on">SLIDE1 EXTEND</string>
+    <string name="menu_slide1_off">SLIDE1 RETRACT</string>
+    <string name="menu_slide2_on">SLIDE2 EXTEND</string>
+    <string name="menu_slide2_off">SLIDE2 RETRACT</string>
+    <string name="menu_slide3_on">SLIDE3 EXTEND</string>
+    <string name="menu_slide3_off">SLIDE3 RETRACT</string>
+    <string name="menu_awning_on">AWNING	AWNING IN</string>
+    <string name="menu_awning_off">AWNING OUT</string>
+    <string name="menu_jack1_on">JACK1	JACK1 UP</string>
+    <string name="menu_jack1_off">JACK1 DOWN</string>
+    <string name="menu_jack2_on">JACK2	JACK2 UP</string>
+    <string name="menu_jack2_off">JACK2 DOWN</string>
+
+    <!--ZONE1	ZONE1 OFF                              ZONE1 ON-->
+    <string name="menu_main_lgt_off">MAIN LIGHT OFF</string>
+    <string name="menu_main_lgt_on">MAIN LIGHT ON</string>
+    <!--BDR      LGT	BEDROOM LIGHT OFF                             BEDROOM LIGHT ON-->
+    <string name="menu_bath_lgt_off">BATCHROOM LIGHT OFF</string>
+    <string name="menu_bath_lgt_on">BATCHROOM LIGHT ON</string>
+    <string name="menu_ext_lgt_off">EXTERIOR LIGHT OFF</string>
+    <string name="menu_ext_lgt_on">EXTERIOR LIGHT ON</string>
+    <string name="menu_road_lgt_off">ROAD LIGHT OFF</string>
+    <string name="menu_road_lgt_on">ROAD LIGHT ON</string>
+    <!--PCH        LGT	PCH LIGHT OFF                              PCH LIGHT ON-->
+    <string name="menu_bed_lgt_off">BED LIGHT OFF</string>
+    <string name="menu_bed_lgt_on">BED LIGHT ON</string>
+    <!--JACK1	JACK1 UP                            JACK1 DOWN
+    JACK2	JACK2 UP                            JACK2 DOWN
+    SLIDE3	SLIDE3 EXTEND                 SLIDE3 RETRACT
+    M1	MOTOR1 EXTEND    MOTOR1 RETRACT
+    M2	MOTOR2 EXTEND    MOTOR2 RETRACT
+    M3	MOTOR3 EXTEND    MOTOR3 RETRACT-->
+
+    <string name="bluetooth_click_tips">Press any button on your device to confirm connection</string>
+    <string name="bluetooth_click_timeout">Not press any button on your device</string>
+    <string name="w_and_p"><![CDATA[W & P]]></string>
+    <string name="power_click_tips"><![CDATA[Press logo for ON/OFF]]></string>
+
+    <string name="menu_extend">EXTEND</string>
+    <string name="menu_retract">RETRACT</string>
+    <string name="menu_on">ON</string>
+    <string name="menu_off">OFF</string>
+    <string name="menu_up">UP</string>
+    <string name="menu_down">DOWN</string>
+    <string name="menu_ramp_off">RAMP LGT OFF</string>
+    <string name="menu_ramp_on">RAMP LGT ON</string>
+    <string name="menu_acct_off">ACCT LIGHT OFF</string>
+    <string name="menu_acct_on">ACCT LIGHT ON</string>
+    <string name="menu_main_off">MAIN LIGHT OFF</string>
+    <string name="menu_main_on">MAIN LIGHT ON</string>
+    <string name="menu_bath_off">BATHROOM LIGHT OFF</string>
+    <string name="menu_bath_on">BATHROOM LIGHT ON</string>
+    <string name="menu_bed_off">BEDROOM LIGHT OFF</string>
+    <string name="menu_bed_on">BEDROOM LIGHT ON</string>
+    <!--<string name="menu_awn_off">AWN LIGHT OFF</string>
+    <string name="menu_awn_on">AWN LIGHT ON</string>-->
+    <string name="menu_step_cap_off">STEP CAP LIGHT OFF</string>
+    <string name="menu_step_cap_on">STEO CAP LIGHT ON</string>
+
+    <string name="menu_slide_on">SLIDE3 EXTEND</string>
+    <string name="menu_slide_off">SLIDE3 RETRACT</string>
+    <string name="menu_awn_on">AWNING EXTEND</string>
+    <string name="menu_awn_off">AWNING RETRACT</string>
+    <string name="menu_happibunk_on">HAPPiBUNK EXTEND</string>
+    <string name="menu_happibunk_off">HAPPiBUNK RETRACT</string>
+
+
+    <string name="local_con_info">Make sure your smart phone is connected to wifi route. Select the device your want to control</string>
+
+    <string name="add_device_info">Long press the button on device 5 seconds,until the LED flash</string>
+    <string name="add_device_info_input_pwd">Config the device with your password</string>
+    <string name="add_device_info_writing"> writing route password…</string>
+    <string name="add_device_info_fail">Failed to connect,try again.</string>
+
+    <string name="sure_wifi_connected">Make sure your mobile phone \n is connected to wifi route</string>
+    <string name="active_configure">Activate device to wifi configure \n by long press the wifi button</string>
+    <string name="see_flashing">see the amber LED flashing?</string>
+    <string name="input_pwd_hint">Please input password</string>
+    <string name="input_id_hint">Please input ID</string>
+
+    <string name="configing_wifi_info">Configure your device. please wait for seconds</string>
+    <string name="wrong_no_network">Seems your smart phone is not connected \n to router, Please make sure your phone is \n connected,and try again!</string>
+    <string name="wrong_timeout">Oops! failed to configure your device. please make sure you entered correct password, and the device is placed close to the router</string>
+    <string name="get_device_version">Get the type of the equipment.</string>
+    <string name="get_device_version_loading">Loading, please wait...</string>
+
+    <string name="login_info">Enter your ID and passwords to log on the server</string>
+    <string name="remember_pwd">Remember my password</string>
+    <string name="forget_pwd">Forget my password</string>
+
+    <string name="register_info">A confirmation email will be sent to your registered email please click the link in the email to complete the activation</string>
+    <string name="forgot_send_email">Password has been sent to your $email, please check in your email.</string>
+</resources>
+

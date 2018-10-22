@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/umcsdk_shap_bg"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ENTER EMAIL"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dialog_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Please tell us the brand of your boat so we can better improve our software features and provide a more customized experience for you in the future!"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/dialog_edit_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:inputType="textEmailAddress"
+            android:padding="1dp"
+            android:text=""
+            android:textSize="14sp" />
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:background="#a9a9a9" />-->
+
+        <TextView
+            android:id="@+id/dialog_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="3"
+            android:background="@mipmap/dialog_submit"
+            android:gravity="center"
+            android:padding="5dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/dialog_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/color_tv_red"/>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'com.github.kt3k.coveralls'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+//        applicationId "cn.com.startai.mqsdk"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    greendao {
+
+        //数据库版本
+        schemaVersion 29
+        //设置DaoMaster、DaoSession、Dao包名
+        daoPackage "cn.com.startai.newUI.db.gen"
+        //设置DaoMaster、DaoSession、Dao目录
+        targetGenDir "src/main/java"
+    }
+
+}
+
+allprojects {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        jcenter()
+        mavenCentral()
+//        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:animated-vector-drawable:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    implementation project(':mqttsdk')
+    //    implementation files('libs/startai-mq-android-3.0.1.jar')
+    //    implementation files('libs/org.eclipse.paho.client.mqttv3-1.2.0.jar')
+    implementation files('libs/zxingscanner-2.1.0.jar')
+    implementation files('libs/core-3.3.0.jar')
+    implementation files('libs/androidsubutil.jar')
+//    implementation files('libs/androidutilcode-1.13.7.jar')
+    implementation files('libs/startai-airkiss-sender-1.0.jar')
+    debugImplementation('com.amitshekhar.android:debug-db:1.0.0') {
+        exclude module: 'gson'
+    }
+    implementation files('libs/eventbus-3.0.0.jar')
+    implementation files('libs/startai-esptouch-sender-1.0.jar')
+    //    implementation files('libs/gson-2.4.jar')
+    //    implementation files('libs/org.eclipse.paho.client.mqttv3-1.2.0.jar')
+    //    implementation files('libs/startai-mqtt-3.0.3.jar')
+    //startai mqtt  sdk包
+    implementation 'cn.com.startai:mqsdk:3.1.14'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    api 'cn.com.swain169:baselib:3.0.17'
+    api 'cn.com.swain169:Tlog:3.0.18'
+    implementation 'cn.com.swain169:protocolEngine:3.0.13'
+    implementation files('libs/startai-esptouch-sender-1.0.jar')
+    implementation files('libs/startai-udp-1.0.jar')
+    // dao
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.0.0'
+
+    implementation 'com.blankj:utilcode:1.19.3'
+    implementation 'org.xutils:xutils:3.5.0'
+    implementation 'cn.com.startai:fastdfssdk:1.0.2'
+}

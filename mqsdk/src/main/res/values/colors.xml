@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="startai_green">#FF99cc33</color>
+    <color name="white">#ffffff</color>
+    <!--<color name="color_gray">#FFa0a0a0</color>-->
+    <color name="light_black">#191919</color>
+
+
+<!--    <color name="colorPrimary">#1DE9B6</color>
+    <color name="colorPrimaryDark">#1DE9B6</color>
+    <color name="colorAccent">#FF5722</color>-->
+
+
+    <color name="color_transparent">#00000000</color>
+    <color name="color_transparent_half">#70000000</color>
+    <color name="color_transparent_">#000000</color>
+    <color name="safe_mode_text">#aff1f1f1</color>
+
+    <color name="color_sep_line">#d8d8d8</color>
+
+    <color name="color_tv_black">#333333</color>
+    <color name="color_tv_gray">#666666</color>
+    <color name="color_tv_hint">#999999</color>
+    <color name="color_gray">#666666</color>
+    <color name="color_green">#00FF00</color>
+    <color name="color_red">#ff0000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_tv_red">#ff6161</color>
+    <color name="color_tv_orange">#ff9400</color>
+    <color name="color_tv_orange_light">#fdedba</color>
+    <color name="color_tv_white">#ffffff</color>
+
+    <color name="color_bg_gray_half">#882B3647</color>
+    <color name="color_bg_gray">#f1f1f1</color>
+    <color name="color_bg_gray_find">#cacaca</color>
+    <color name="color_bg_dark">#2B3647</color>
+
+    <color name="gesture_background">#ff303237</color>
+    <drawable name="trans">@color/color_transparent</drawable>
+    <color name="gear_in_color">#cf808080</color>
+
+    <color name="color_bg">#f5f5f5</color>
+</resources>

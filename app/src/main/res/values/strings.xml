@@ -1,0 +1,157 @@
+<resources>
+    <string name="app_name">YAK-POWER</string>
+
+    <string name="notifyTitle">Tips</string>
+    <string name="gpsNotifyMsg">Current mobile phone scanning Bluetooth needs to open positioning function. </string>
+    <string name="bluetoothNotifyMsg">Please turn on Bluetooth first. </string>
+    <string name="setting">Go setting</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="tips">Tips</string>
+    <string name="bluetoothCloseConfirmMsg">Do you want to turn off Bluetooth? </string>
+    <string name="bluetoothSelectMsg">Select Your Bluetooth Device</string>
+
+    <string name="menu_power_on">POWER ON</string>
+    <string name="menu_power_off">POWER OFF</string>
+    <string name="menu_b_off">BEDROOM LGT OFF</string>
+    <string name="menu_b_on">BEDROOM LGT ON</string>
+    <string name="menu_m_off">MAIN LGT OFF</string>
+    <string name="menu_m_on">MAIN LGT ON</string>
+    <string name="menu_s_on">STREET LGT ON</string>
+    <string name="menu_s_off">STREET LGT OFF</string>
+    <string name="menu_1_off">ROOM1 OFF</string>
+    <string name="menu_1_on">ROOM1 ON</string>
+    <string name="menu_2_on">ROOM2 ON</string>
+    <string name="menu_2_off">ROOM2 OFF</string>
+    <string name="menu_3_on">ROOM3 ON</string>
+    <string name="menu_3_off">ROOM3 OFF</string>
+    <string name="menu_nav_on">NAVIGATION LGT ON</string>
+    <string name="menu_nav_off">NAVIGATION LGT OFF</string>
+
+    <string name="menu_blg_off">BILGE OFF</string>
+    <string name="menu_int_off">INTERIOR OFF</string>
+    <string name="menu_acc1_off">ACCESSORY 1 OFF</string>
+    <string name="menu_acc2_off">ACCESSORY 2 OFF</string>
+    <string name="menu_horn_off">HORN OFF</string>
+    <string name="menu_live_off">LIVE WELL OFF</string>
+    <string name="menu_blg_on">BILGE ON</string>
+    <string name="menu_int_on">INTERIOR ON</string>
+    <string name="menu_acc1_on">ACCESSORY 1 ON</string>
+    <string name="menu_acc2_on">ACCESSORY 2 ON</string>
+    <string name="menu_horn_on">HORN ON</string>
+    <string name="menu_live_on">LIVE WELL ON</string>
+
+    <string name="menu_swamp_lgt_off">SWAMP LGT OFF</string>
+    <string name="menu_swamp_lgt_on">SWAMP LGT ON</string>
+    <string name="menu_acc3_off">ACCESSORY 3 OFF</string>
+    <string name="menu_acc3_on">ACCESSORY 3 ON</string>
+    <string name="menu_acc4_off">ACCESSORY 4 OFF</string>
+    <string name="menu_acc4_on">ACCESSORY 4 ON</string>
+    <string name="menu_live_interval">LIVE WELL INTERVAL</string>
+
+    <string name="menu_z1_off">ZONE1 OFF</string>
+    <string name="menu_z1_on">ZONE1 ON</string>
+    <string name="menu_z2_off">ZONE2 OFF</string>
+    <string name="menu_z2_on">ZONE2 ON</string>
+    <string name="menu_z3_off">ZONE3 OFF</string>
+    <string name="menu_z3_on">ZONE3 ON</string>
+    <string name="menu_z4_off">ZONE4 OFF</string>
+    <string name="menu_z4_on">ZONE4 ON</string>
+    <string name="menu_z5_off">ZONE5 OFF</string>
+    <string name="menu_z5_on">ZONE5 ON</string>
+    <string name="menu_z6_off">ZONE6 OFF</string>
+    <string name="menu_z6_on">ZONE6 ON</string>
+    <string name="menu_z7_off">ZONE7 OFF</string>
+    <string name="menu_z7_on">ZONE7 ON</string>
+    <string name="menu_z8_off">ZONE8 OFF</string>
+    <string name="menu_z8_on">ZONE8 ON</string>
+    <string name="menu_m1_on">MOTOR1 EXTEND</string>
+    <string name="menu_m1_off">MOTOR1 RETRACT</string>
+    <string name="menu_m2_on">MOTOR2 EXTEND</string>
+    <string name="menu_m2_off">MOTOR2 RETRACT</string>
+    <string name="menu_m3_on">MOTOR3 EXTEND</string>
+    <string name="menu_m3_off">MOTOR3 RETRACT</string>
+    <string name="menu_m4_on">MOTOR4 EXTEND</string>
+    <string name="menu_m4_off">MOTOR4 RETRACT</string>
+    <string name="menu_m5_on">MOTOR5 EXTEND</string>
+    <string name="menu_m5_off">MOTOR5 RETRACT</string>
+    <string name="menu_m6_on">MOTOR6 EXTEND</string>
+    <string name="menu_m6_off">MOTOR6 RETRACT</string>
+
+    <string name="menu_zone1_off">ZONE1 OFF</string>
+    <string name="menu_zone1_on">ZONE1 ON</string>
+    <string name="menu_bdr_lgt_off">BEDROOM LIGHT OFF</string>
+    <string name="menu_bdr_lgt_on">BEDROOM LIGHT ON</string>
+    <string name="menu_lvr_lgt_off">LIVING ROOM LIGHT OFF</string>
+    <string name="menu_lvr_lgt_on">LIVING ROOM LIGHT ON</string>
+    <string name="menu_zone2_off">ZONE2 OFF</string>
+    <string name="menu_zone2_on">ZONE2 ON</string>
+    <string name="menu_zone3_off">ZONE3 OFF</string>
+    <string name="menu_zone3_on">ZONE3 ON</string>
+    <string name="menu_pch_lgt_off">PCH LIGHT OFF</string>
+    <string name="menu_pch_lgt_on">PCH LIGHT ON</string>
+    <string name="menu_awn_lgt_off">AWNING LIGHT OFF</string>
+    <string name="menu_awn_lgt_on">AWNING LIGHT ON</string>
+    <string name="menu_wifi_off">WIFI OFF</string>
+    <string name="menu_wifi_on">WIFI ON</string>
+    <string name="menu_slide1_on">SLIDE1 EXTEND</string>
+    <string name="menu_slide1_off">SLIDE1 RETRACT</string>
+    <string name="menu_slide2_on">SLIDE2 EXTEND</string>
+    <string name="menu_slide2_off">SLIDE2 RETRACT</string>
+    <string name="menu_slide3_on">SLIDE3 EXTEND</string>
+    <string name="menu_slide3_off">SLIDE3 RETRACT</string>
+    <string name="menu_awning_on">AWNING	AWNING IN</string>
+    <string name="menu_awning_off">AWNING OUT</string>
+    <string name="menu_jack1_on">JACK1	JACK1 UP</string>
+    <string name="menu_jack1_off">JACK1 DOWN</string>
+    <string name="menu_jack2_on">JACK2	JACK2 UP</string>
+    <string name="menu_jack2_off">JACK2 DOWN</string>
+
+    <!--ZONE1	ZONE1 OFF                              ZONE1 ON-->
+    <string name="menu_main_lgt_off">MAIN LIGHT OFF</string>
+    <string name="menu_main_lgt_on">MAIN LIGHT ON</string>
+    <!--BDR      LGT	BEDROOM LIGHT OFF                             BEDROOM LIGHT ON-->
+    <string name="menu_bath_lgt_off">BATCHROOM LIGHT OFF</string>
+    <string name="menu_bath_lgt_on">BATCHROOM LIGHT ON</string>
+    <string name="menu_ext_lgt_off">EXTERIOR LIGHT OFF</string>
+    <string name="menu_ext_lgt_on">EXTERIOR LIGHT ON</string>
+    <string name="menu_road_lgt_off">ROAD LIGHT OFF</string>
+    <string name="menu_road_lgt_on">ROAD LIGHT ON</string>
+    <!--PCH        LGT	PCH LIGHT OFF                              PCH LIGHT ON-->
+    <string name="menu_bed_lgt_off">BED LIGHT OFF</string>
+    <string name="menu_bed_lgt_on">BED LIGHT ON</string>
+    <string name="bluetooth_click_tips">Press any button on your device to confirm connection</string>
+    <string name="bluetooth_click_timeout">Not press any button on your device</string>
+    <string name="w_and_p"><![CDATA[W & P]]></string>
+    <string name="power_click_tips"><![CDATA[Press logo for ON/OFF]]></string>
+
+    <string name="menu_extend">EXTEND</string>
+    <string name="menu_retract">RETRACT</string>
+    <string name="menu_on">ON</string>
+    <string name="menu_off">OFF</string>
+    <string name="menu_up">UP</string>
+    <string name="menu_down">DOWN</string>
+    <string name="menu_ramp_off">RAMP LGT OFF</string>
+    <string name="menu_ramp_on">RAMP LGT ON</string>
+    <string name="menu_acct_off">ACCT LIGHT OFF</string>
+    <string name="menu_acct_on">ACCT LIGHT ON</string>
+    <string name="menu_main_off">MAIN LIGHT OFF</string>
+    <string name="menu_main_on">MAIN LIGHT ON</string>
+    <string name="menu_bath_off">BATHROOM LIGHT OFF</string>
+    <string name="menu_bath_on">BATHROOM LIGHT ON</string>
+    <string name="menu_bed_off">BEDROOM LIGHT OFF</string>
+    <string name="menu_bed_on">BEDROOM LIGHT ON</string>
+    <!--<string name="menu_awn_off">AWN LIGHT OFF</string>
+    <string name="menu_awn_on">AWN LIGHT ON</string>-->
+    <string name="menu_step_cap_off">STEP CAP LIGHT OFF</string>
+    <string name="menu_step_cap_on">STEO CAP LIGHT ON</string>
+
+    <string name="menu_slide_on">SLIDE3 EXTEND</string>
+    <string name="menu_slide_off">SLIDE3 RETRACT</string>
+    <string name="menu_awn_on">AWNING EXTEND</string>
+    <string name="menu_awn_off">AWNING RETRACT</string>
+    <string name="menu_happibunk_on">HAPPiBUNK EXTEND</string>
+    <string name="menu_happibunk_off">HAPPiBUNK RETRACT</string>
+
+
+</resources>

@@ -1,0 +1,306 @@
+package cn.com.startai.mqsdk;
+
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
+import android.view.WindowManager;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.ArrayList;
+
+import cn.com.startai.mqsdk.listener.MySendListener;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8001_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8001_Resp_;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8002_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8003_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8004_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8005_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8016_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8017_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8018_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8018_Resp_;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8020_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8021_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8022_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8024_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8101_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_0x8200_Resp;
+import cn.com.startai.mqsdk.util.eventbus.E_Conn_Break;
+import cn.com.startai.mqsdk.util.eventbus.E_Conn_Failed;
+import cn.com.startai.mqsdk.util.eventbus.E_Conn_Success;
+import cn.com.startai.mqsdk.util.eventbus.E_Device_Connect_Status;
+import cn.com.startai.mqsdk.util.eventbus.EventBean;
+import cn.com.startai.mqttsdk.busi.entity.C_0x8005;
+import cn.com.startai.mqttsdk.busi.entity.C_0x8023;
+import cn.com.startai.mqttsdk.busi.entity.C_0x8025;
+import cn.com.startai.mqttsdk.listener.IOnCallListener;
+import cn.com.startai.mqttsdk.utils.SLog;
+
+/**
+ * Created by Robin on 2018/7/10.
+ * qq: 419109715 彬影
+ */
+
+public class BaseActivity extends AppCompatActivity {
+
+    static ArrayList<Activity> activityArrayList = new ArrayList<>();
+    private static String TAG = BaseActivity.class.getSimpleName();
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+        //无title
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //全屏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // 坚持竖屏
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+        super.onCreate(savedInstanceState);
+        activityArrayList.add(this);
+        SLog.d(TAG, this.getClass().getSimpleName() + " added to activitylist" + " size = " + activityArrayList.size());
+
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
+        activityArrayList.remove(this);
+        SLog.d(TAG, this.getClass().getSimpleName() + " remove to activitylist" + " size = " + activityArrayList.size());
+    }
+
+    protected void finishAllActivity() {
+
+        for (Activity activity : activityArrayList) {
+            SLog.d(TAG, activity.getClass().getSimpleName() + " finish");
+            activity.finish();
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventExecute(EventBean event) {
+
+        String eventType = event.getEventType();
+
+        switch (eventType) {
+            case EventBean.S_2_A_ACTIVATE_RESULT:
+                E_0x8001_Resp e_0x8001_resp = (E_0x8001_Resp) event.getEventContent();
+                onActiviateResult(e_0x8001_resp);
+                break;
+            case EventBean.S_2_A_BIND_RESULT:
+                E_0x8002_Resp e_0x8002_resp = (E_0x8002_Resp) event.getEventContent();
+                onBindResult(e_0x8002_resp);
+                break;
+            case EventBean.S_2_A_BINDLIST_RESULT:
+                E_0x8005_Resp e_0x8005_resp = (E_0x8005_Resp) event.getEventContent();
+                onBindListResult(e_0x8005_resp);
+                break;
+            case EventBean.S_2_A_CHECK_IDENTIFY_RESULT:
+                E_0x8022_Resp e_0x8022_resp = (E_0x8022_Resp) event.getEventContent();
+                onCheckIdentifyResult(e_0x8022_resp);
+                break;
+            case EventBean.S_2_A_CUSTOMER_ACTIVATE_RESULT:
+                E_0x8001_Resp_ e_0x8001_resp_ = (E_0x8001_Resp_) event.getEventContent();
+                onHardwareActivateResult(e_0x8001_resp_);
+                break;
+            case EventBean.S_2_A_GET_IDENTIFY_RESULT:
+                E_0x8021_Resp e_0x8021_resp = (E_0x8021_Resp) event.getEventContent();
+                onGetIdentifyResult(e_0x8021_resp);
+                break;
+            case EventBean.S_2_A_LOGIN_RESULT:
+                E_0x8018_Resp e_0x8018_resp = (E_0x8018_Resp) event.getEventContent();
+                onLoginResult(e_0x8018_resp);
+                break;
+            case EventBean.S_2_A_LOGOUT_RESULT:
+                E_0x8018_Resp_ e_0x8018_resp_ = (E_0x8018_Resp_) event.getEventContent();
+                onLogoutResult(e_0x8018_resp_);
+                break;
+            case EventBean.S_2_A_REGISTER_RESULT:
+                E_0x8017_Resp e_0x8017_resp = (E_0x8017_Resp) event.getEventContent();
+                onRegisterResult(e_0x8017_resp);
+                break;
+            case EventBean.S_2_A_UN_ACTIVITE_RESULT:
+                E_0x8003_Resp e_0x8003_resp1 = (E_0x8003_Resp) event.getEventContent();
+
+                onUnActiviteResult(e_0x8003_resp1);
+                break;
+            case EventBean.S_2_A_UNBIND_RESULT:
+                E_0x8004_Resp e_0x8004_resp = (E_0x8004_Resp) event.getEventContent();
+                onUnBindResult(e_0x8004_resp);
+                break;
+            case EventBean.S_2_A_CONN_BREAK:
+                E_Conn_Break e_conn_break = (E_Conn_Break) event.getEventContent();
+                onDisconnect(e_conn_break);
+                break;
+            case EventBean.S_2_A_CONN_FAILED:
+                E_Conn_Failed e_conn_failed = (E_Conn_Failed) event.getEventContent();
+                onConnectFail(e_conn_failed);
+                break;
+            case EventBean.S_2_A_CONN_SUCCESS:
+                E_Conn_Success e_conn_success = (E_Conn_Success) event.getEventContent();
+                onConnected(e_conn_success);
+                break;
+            case EventBean.S_2_A_PASSTHROUTH_RESULT:
+                E_0x8200_Resp e_0x8200_resp = (E_0x8200_Resp) event.getEventContent();
+                onPassthrouthResult(e_0x8200_resp);
+                break;
+
+            case EventBean.S_2_A_0x8101_RESP:
+                E_0x8101_Resp e_0x8101_resp = (E_0x8101_Resp) event.getEventContent();
+
+                on_0x8101_resp(e_0x8101_resp);
+                break;
+            case EventBean.S_2_A_UPDATEUSEINFO_RESULT:
+
+                E_0x8020_Resp e_0x8020_resp = (E_0x8020_Resp) event.getEventContent();
+                onUpdateUserInfoResult(e_0x8020_resp);
+                break;
+            case EventBean.S_2_A_GETUSERINFO_RESULT:
+                E_0x8024_Resp e_0x8024_resp = (E_0x8024_Resp) event.getEventContent();
+                onGetUserInfoResult(e_0x8024_resp);
+                break;
+            case EventBean.S_2_A_DEVICE_CONNECT_STATUS_CHANGE:
+                E_Device_Connect_Status e_device_connect_status = (E_Device_Connect_Status) event.getEventContent();
+                onDeviceConnectStatusChange(e_device_connect_status);
+                break;
+            case EventBean.S_2_A_GETLATEST_VERSION_RESULT:
+
+                E_0x8016_Resp e_0x8016_resp = (E_0x8016_Resp) event.getEventContent();
+                onGetLatestVersionResult(e_0x8016_resp);
+                break;
+            case EventBean.S_2_A_EMAIL_SEND:
+                C_0x8023.Resp resp = (C_0x8023.Resp) event.getEventContent();
+                onEmilSend(resp);
+                break;
+            case EventBean.S_2_A_UPDATE_PWD:
+                C_0x8025.Resp resppwd = ( C_0x8025.Resp) event.getEventContent();
+                onUpdatePwdResult(resppwd);
+                break;
+
+        }
+    }
+
+    public void onUpdatePwdResult(C_0x8025.Resp resppwd) {
+    }
+
+    public  void onEmilSend(C_0x8023.Resp resp) {
+    }
+
+    public void onGetLatestVersionResult(E_0x8016_Resp e_0x8016_resp) {
+
+    }
+
+    public void onDeviceConnectStatusChange(E_Device_Connect_Status e_device_connect_status) {
+
+    }
+
+    public void onGetUserInfoResult(E_0x8024_Resp resp) {
+
+    }
+
+    public void onUpdateUserInfoResult(E_0x8020_Resp resp) {
+
+    }
+
+    public void on_0x8101_resp(E_0x8101_Resp resp) {
+
+    }
+
+    public void onBindResult(E_0x8002_Resp resp) {
+
+    }
+
+    public void onLoginResult(E_0x8018_Resp resp) {
+
+    }
+
+    public void onUnBindResult(E_0x8004_Resp resp) {
+
+    }
+
+    public void onRegisterResult(E_0x8017_Resp resp) {
+
+    }
+
+    public void onGetIdentifyResult(E_0x8021_Resp resp) {
+
+    }
+
+    public void onCheckIdentifyResult(E_0x8022_Resp resp) {
+
+    }
+
+    public void onLogoutResult(E_0x8018_Resp_ resp_) {
+
+    }
+
+    public void onUnActiviteResult(E_0x8003_Resp resp) {
+
+    }
+
+    public void onActiviateResult(E_0x8001_Resp resp) {
+
+    }
+
+    public void onHardwareActivateResult(E_0x8001_Resp_ resp_) {
+
+    }
+
+    public void onPassthrouthResult(E_0x8200_Resp resp) {
+
+    }
+
+    public void onBindListResult(E_0x8005_Resp resp) {
+
+    }
+
+
+    public void onConnectFail(E_Conn_Failed e_conn_failed) {
+
+    }
+
+    public void onConnected(E_Conn_Success e_conn_success) {
+
+    }
+
+    public void onDisconnect(E_Conn_Break e_conn_break) {
+
+    }
+
+    /**
+     * 消息发送的结果回调
+     */
+    public IOnCallListener onCallListener = new MySendListener();
+
+    public C_0x8005.Resp.ContentBean getDevice() {
+        return null;
+    }
+
+    public String getDeviceID() {
+        return null;
+    }
+
+}

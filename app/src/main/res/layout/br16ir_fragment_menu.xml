@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/rp8_menu_bg_new"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/rp8_gear"
+                android:layout_width="64dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@mipmap/settings" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="400dp"
+            android:layout_height="209dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/kp14_lay_out_no_power">
+            <Button
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:id="@+id/blink_wifi_rate"/>
+            <Button
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:id="@+id/run_m1"/>
+            <Button
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:id="@+id/run_m2"/>
+            <Button
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:id="@+id/run_m3"/>
+            <Button
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:id="@+id/run_m4"/>
+            <Button
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:id="@+id/run_m5"/>
+            <Button
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:id="@+id/run_m6"/>
+            <Button
+                android:id="@+id/btn_on_off"
+                android:layout_width="135dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="55dp"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/brand_innovator" />
+
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m1_1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="95dp"
+                android:layout_marginTop="44dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"  />
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="95dp"
+                android:layout_marginTop="44dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="JACK\n1"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m2_1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="26dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"  />
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m2"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="26dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="JACK\n2"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m3_1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"  />
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m3"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="SLIDE\n1"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m4_1"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common_110"  />
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m4"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common_110"
+                android:text="M1"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m5_1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="26dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"  />
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m5"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="26dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="M2"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m6_1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_above="@+id/btn_center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="89dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"  />
+            <com.o88o.bluetoothrp8.widget.LongClickButton
+                android:id="@+id/btn_m6"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_above="@+id/btn_center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="89dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="M3"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <TextView
+                android:id="@+id/btn_brand"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="48dp"
+                android:layout_marginTop="70dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@null"
+                android:text="Press logo \nfor ON/OFF"
+                android:textColor="@color/color_white"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_8" />
+
+            <ImageView
+                android:id="@+id/layout_wifi"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="84dp"
+                android:layout_marginTop="91dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/wifi_on" />
+
+            <ImageView
+                android:id="@+id/layout_logo"
+                android:layout_width="105dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/btn_center"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/by_layout_logo" />
+
+            <ImageView
+                android:id="@+id/layout_bt"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="84dp"
+                android:layout_marginTop="91dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/bt_on" />
+
+            <!--<Button
+                android:id="@+id/btn_on_off"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/rp8_btn_off" />
+-->
+
+            <Button
+                android:id="@+id/btn_center"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/btn_z1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="129dp"
+                android:layout_marginTop="82dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="ZONE\n1"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <Button
+                android:id="@+id/btn_z2"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/btn_center"
+                android:layout_marginRight="93dp"
+                android:layout_marginTop="16dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="MAIN\nLGT"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <Button
+                android:id="@+id/btn_z3"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/btn_center"
+                android:layout_marginRight="48dp"
+                android:layout_marginTop="32dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="BDR\nLGT"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <Button
+                android:id="@+id/btn_z4"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/btn_center"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="38dp"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_toStartOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="BATH\nLGT"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <Button
+                android:id="@+id/btn_z5"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_below="@+id/btn_center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common_110"
+                android:text="EXT\nLGT"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <Button
+                android:id="@+id/btn_z6"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/btn_center"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="34dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="ROAD\nLGT"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <Button
+                android:id="@+id/btn_z7"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/btn_center"
+                android:layout_marginLeft="88dp"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="PCH\nLGT"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+            <Button
+                android:id="@+id/btn_z8"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="82dp"
+                android:layout_toEndOf="@+id/btn_center"
+                android:layout_toRightOf="@+id/btn_center"
+                android:background="@mipmap/btn_common"
+                android:text="BED\nLGT"
+                android:textColor="@color/color_tv_white"
+                android:textSize="@dimen/text_size_10" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/btn_layout_down"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--android:layout_width="400dp"
+            android:layout_height="320dp"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="ZONE\n1"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_z1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_zone1_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                        <com.o88o.bluetoothrp8.widget.LongClickButton
+                            android:id="@+id/panel_btn_m1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/btn_common_110"
+                            android:text="JACK\n1"
+                            android:textColor="@color/color_tv_white"
+                            android:textSize="@dimen/text_size_6" />
+                    <TextView
+                        android:id="@+id/panel_tv_m1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_jack1_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="MAIN\nLGT"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_z2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_main_lgt_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                        <com.o88o.bluetoothrp8.widget.LongClickButton
+                            android:id="@+id/panel_btn_m2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/btn_common_110"
+                            android:text="JACK\n2"
+                            android:textColor="@color/color_tv_white"
+                            android:textSize="@dimen/text_size_6" />
+                    <TextView
+                        android:id="@+id/panel_tv_m2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_jack2_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="BDR\nLGT"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_z3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_bdr_lgt_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                        <com.o88o.bluetoothrp8.widget.LongClickButton
+                            android:id="@+id/panel_btn_m3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/btn_common_110"
+                            android:text="SLIDE\n1"
+                            android:textColor="@color/color_tv_white"
+                            android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_m3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_slide1_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="BATH\nLGT"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_z4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_bath_lgt_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                        <com.o88o.bluetoothrp8.widget.LongClickButton
+                            android:id="@+id/panel_btn_m4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/btn_common_110"
+                            android:text="M1"
+                            android:textColor="@color/color_tv_white"
+                            android:textSize="@dimen/text_size_6" />
+                    <TextView
+                        android:id="@+id/panel_tv_m4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_m1_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="EXT\nLGT"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_z5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_ext_lgt_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                        <com.o88o.bluetoothrp8.widget.LongClickButton
+                            android:id="@+id/panel_btn_m5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/btn_common_110"
+                            android:text="m2"
+                            android:textColor="@color/color_tv_white"
+                            android:textSize="@dimen/text_size_6" />
+                    <TextView
+                        android:id="@+id/panel_tv_m5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_m2_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="ROAD\nLGT"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_z6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_road_lgt_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                        <com.o88o.bluetoothrp8.widget.LongClickButton
+                            android:id="@+id/panel_btn_m6"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/btn_common_110"
+                            android:text="m3"
+                            android:textColor="@color/color_tv_white"
+                            android:textSize="@dimen/text_size_6" />
+                    <TextView
+                        android:id="@+id/panel_tv_m6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_m3_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z7"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="PCH\nLGT"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6"
+                        android:layout_marginTop="0px"/>
+
+                    <TextView
+                        android:id="@+id/panel_tv_z7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_pch_lgt_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_power"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@mipmap/rp8_btn_off" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_power"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_power_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/panel_btn_z8"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/btn_common_110"
+                        android:text="BED\nLGT"
+                        android:textColor="@color/color_tv_white"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/panel_tv_z8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_bed_lgt_off"
+                        android:textColor="@color/color_bg_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/rp8_menu_booter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/rp8_menu_booter"
+            />
+    </LinearLayout>
+
+</LinearLayout>
