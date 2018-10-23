@@ -38,19 +38,16 @@ public class SplushActivity extends FragmentActivity {
         initView();
 
         Tlog.v("SplushActivity  requestPermission() ");
-        mPermissionRequest = new PermissionRequest(this,
-                new PermissionRequest.OnPermissionResult() {
-                    @Override
-                    public void onAllPermissionRequestFinish() {
+        mPermissionRequest = new PermissionRequest(this
+        );
+        mPermissionRequest.requestAllPermission(new PermissionRequest.OnPermissionResult() {
 
-                    }
 
-                    @Override
-                    public void onPermissionRequestResult(String permission, boolean granted) {
+                                                    @Override
+                                                    public void onPermissionRequestResult(String permission, boolean granted) {
 
-                    }
-                });
-        mPermissionRequest.requestAllPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                                    }
+                                                }, Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.ACCESS_COARSE_LOCATION);
 
     }

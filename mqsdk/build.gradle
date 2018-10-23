@@ -82,8 +82,8 @@ dependencies {
     implementation 'cn.com.startai:mqsdk:3.1.14'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-    api 'cn.com.swain169:baselib:3.0.17'
-    api 'cn.com.swain169:Tlog:3.0.18'
+    api 'cn.com.swain169:baselib:3.0.18'
+    api 'cn.com.swain169:Tlog:3.0.19'
     implementation 'cn.com.swain169:protocolEngine:3.0.13'
     implementation files('libs/startai-esptouch-sender-1.0.jar')
     implementation files('libs/startai-udp-1.0.jar')
